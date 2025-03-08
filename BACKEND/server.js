@@ -17,8 +17,7 @@ app.get("/",(req,res)=>{
 app.use("/api/auth",authRoutes)  
 app.use("/api/messages",messageRoutes) 
 app.use("/api/users/",userRoutes)
-
-
+ 
 app.listen(5000,()=>{
     connectToMongoDB();
     console.log("MongoDB URI:", process.env.MONGO_DB_URI);
