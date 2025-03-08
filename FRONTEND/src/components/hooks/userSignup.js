@@ -10,7 +10,7 @@ try{
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName, username, password, confirmPassword, gender }),
-    });
+    });       
 
     const data = await res.json();
     if (data.error) {
@@ -28,7 +28,7 @@ try{
 }
 
 export default userSignup
-
+  
 function handleInputErrors({fullName,username,password,confirmPassword,gender}){
     if (!fullName || !username || !password || !confirmPassword || !gender){
         toast.error("please fill all fields ")
@@ -43,5 +43,5 @@ function handleInputErrors({fullName,username,password,confirmPassword,gender}){
         toast.error("password should be atleast 6 letters ")
         return false
     }
-    return true
+    return true    
 }
